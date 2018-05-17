@@ -8,6 +8,9 @@ var task = {
     },
     update: function(id, cb) {
         orm.update('tasks', id, cb);
+    },
+    create: function(name, cb) {
+        orm.create('tasks', name, cb);
     }
 }
 
