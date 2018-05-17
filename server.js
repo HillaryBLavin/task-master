@@ -18,5 +18,8 @@ app.engine('handlebars', exphbs({
 
 app.set('view engine', 'handlebars');
 
+var routes = require('./controllers/tasks_controller.js');
+app.use('/', routes);
+
 var port = 3000;
 app.listen(port);
