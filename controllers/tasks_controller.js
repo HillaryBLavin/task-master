@@ -10,4 +10,11 @@ router.get('/', function(req, res) {
     
 })
 
+router.put('/tasks/update', function(req, res) {
+    task.update(req.body.task_id, function(result) {
+        console.log(result);
+        res.redirect('/');
+    });
+});
+
 module.exports = router;

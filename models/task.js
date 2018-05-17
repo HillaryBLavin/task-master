@@ -5,6 +5,9 @@ var task = {
         orm.all('tasks', function(res) {
             cb(res);
         })
+    },
+    update: function(id, cb) {
+        orm.update('tasks', id, cb);
     }
 }
 
